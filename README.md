@@ -133,7 +133,7 @@ There is no monthly limit. You are allowed to make up to 3 requests per second.
   
 * **URL**
 
-  `http://playcheaper.com/api/v1/game/{id}`
+  `http://playcheaper.com/api/v1/game/{game_id}`
 
 * **Method:**
   
@@ -141,7 +141,7 @@ There is no monthly limit. You are allowed to make up to 3 requests per second.
    
 * **Success Response:**
 ```json
-"games": [{
+"game": [{
   "id":6,
   "link":"https://store.steampowered.com/app/550",
   "is_free":false,
@@ -159,5 +159,47 @@ There is no monthly limit. You are allowed to make up to 3 requests per second.
 *  **Examples**<br>
   `http://playcheaper.com/api/v1/game/6`
   
+* ## Screenshots
+  Endpoint for getting screenshots for the game
+  
+* **URL**
 
+  `http://playcheaper.com/api/v1/screenshots/{game_id}`
 
+* **Method:**
+  
+  `GET`
+   
+* **Success Response:**
+```json
+"screenshots": [{
+  "small":"https://cdn.akamai.steamstatic.com/steam/apps/550/ss_2eae29fbdfe8e5e8999b96d8bb28c5db70507968.600x338.jpg?t=1601578341",
+  "large":"https://cdn.akamai.steamstatic.com/steam/apps/550/ss_2eae29fbdfe8e5e8999b96d8bb28c5db70507968.1920x1080.jpg?t=1601578341"
+ }]
+
+```
+*  **Examples**<br>
+  `http://playcheaper.com/api/v1/screenshots/6`
+  
+* ## Genres
+  Get list of all possible genres
+  
+* **URL**
+
+  `http://playcheaper.com/api/v1/genres`
+
+* **Method:**
+  
+  `GET`
+   
+* **Success Response:**
+```json
+"genres": [
+  {"id":1,"name":"Casual"},
+  {"id":2,"name":"Indie"},
+  {"id":3,"name":"Simulation"},
+  {"id":4,"name":"Sports"},
+  {"id":5,"name":"Adventure"},
+  {"id":6,"name":"RPG"}
+]
+```
