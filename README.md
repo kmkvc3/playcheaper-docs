@@ -144,7 +144,8 @@ There is no monthly limit. You are allowed to make up to 3 requests per second.
 "games": [{
   "id":6,
   "link":"https://store.steampowered.com/app/550",
-  "is_free":false,"title":"Left 4 Dead 2",
+  "is_free":false,
+  "title":"Left 4 Dead 2",
   "genres":[{"id":3,"name":"Action"}],
   "cover_url":"https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg?t=1601578341",
   "discount":80,
