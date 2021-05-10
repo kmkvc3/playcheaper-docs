@@ -79,7 +79,7 @@ There is no monthly limit. You are allowed to make up to 3 requests per second.
    
 * **Success Response:**
 ```json
-"deals": [{
+"games": [{
   "id":134,
   "link":"https://store.steampowered.com/app/257790",
   "title":"Riptide GP2",
@@ -93,6 +93,39 @@ There is no monthly limit. You are allowed to make up to 3 requests per second.
 *  **Examples**<br>
   `http://playcheaper.com/api/v1/games?page=2`<br>
   `http://playcheaper.com/api/v1/games?page=2&page_size=10`<br>
+  
+  * ## Free ames
+  Endpoint for listing only free games
+  
+* **URL**
+
+  `http://playcheaper.com/api/v1/games/free`
+
+* **Method:**
+  
+  `GET`
+  
+*  **URL Params**
+
+   **Optional:**
+ 
+   `page=[int]`<br>
+   `page_size=[int]   max value=50` <br>
+   
+* **Success Response:**
+```json
+"games": [{
+  "id":3944,
+  "link":"https://store.steampowered.com/app/608990",
+  "is_free":true,
+  "title":"The Archotek Project",
+  "cover_url":"https://cdn.akamai.steamstatic.com/steam/apps/608990/header.jpg?t=1587933591"
+}]
+
+```
+*  **Examples**<br>
+  `http://playcheaper.com/api/v1/games/free?page=2`<br>
+  `http://playcheaper.com/api/v1/games/free?page=2&page_size=10`<br>
 
 
 
