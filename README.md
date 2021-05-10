@@ -94,7 +94,7 @@ There is no monthly limit. You are allowed to make up to 3 requests per second.
   `http://playcheaper.com/api/v1/games?page=2`<br>
   `http://playcheaper.com/api/v1/games?page=2&page_size=10`<br>
   
-  * ## Free ames
+* ## Free games
   Endpoint for listing only free games
   
 * **URL**
@@ -128,6 +128,35 @@ There is no monthly limit. You are allowed to make up to 3 requests per second.
   `http://playcheaper.com/api/v1/games/free?page=2&page_size=10`<br>
 
 
+* ## Game details
+  Endpoint for getting more details about the game
+  
+* **URL**
 
+  `http://playcheaper.com/api/v1/game/{id}`
+
+* **Method:**
+  
+  `GET`
+   
+* **Success Response:**
+```json
+"games": [{
+  "id":6,
+  "link":"https://store.steampowered.com/app/550",
+  "is_free":false,"title":"Left 4 Dead 2",
+  "genres":[{"id":3,"name":"Action"}],
+  "cover_url":"https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg?t=1601578341",
+  "discount":80,
+  "initial_price":999,
+  "final_price":199,
+  "currency":"USD",
+  "desc":"Set in the zombie apocalypse, Left 4 Dead 2 (L4D2) is the highly anticipated sequel to the award-winning Left 4 Dead, the #1 co-op game of 2008. This co-operative action horror FPS takes you and your friends through the cities, swamps and cemeteries of the Deep South, from Savannah to New Orleans across five expansive campaigns."
+ }]
+
+```
+*  **Examples**<br>
+  `http://playcheaper.com/api/v1/game/6`
+  
 
 
